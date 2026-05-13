@@ -9,6 +9,7 @@ const allMotorcycles = [
     name: "RY 150-36 Black", 
     image: "/images/RY150-36-Black.jpg", 
     cc: "150cc",
+    price: "GH₵ 13,500",
     specs: {
       engine: "150cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -24,6 +25,7 @@ const allMotorcycles = [
     name: "RY 110-35", 
     image: "/images/ry110-35.jpg", 
     cc: "110cc",
+    price: "GH₵ 9,000",
     specs: {
       engine: "110cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "4-Speed Manual",
@@ -39,6 +41,7 @@ const allMotorcycles = [
     name: "RY 125-17", 
     image: "/images/ry125-17.jpg", 
     cc: "125cc",
+    price: "GH₵ 11,000",
     specs: {
       engine: "125cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -54,6 +57,7 @@ const allMotorcycles = [
     name: "RY 125-9", 
     image: "/images/ry125-9.jpg", 
     cc: "125cc",
+    price: "GH₵ 10,500",
     specs: {
       engine: "125cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -69,6 +73,7 @@ const allMotorcycles = [
     name: "RY 125A", 
     image: "/images/ry125a.jpg", 
     cc: "125cc",
+    price: "GH₵ 11,500",
     specs: {
       engine: "125cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -84,6 +89,7 @@ const allMotorcycles = [
     name: "RY 150-1", 
     image: "/images/ry150-1.jpg", 
     cc: "150cc",
+    price: "GH₵ 11,000",
     specs: {
       engine: "150cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -99,6 +105,7 @@ const allMotorcycles = [
     name: "RY 150-12", 
     image: "/images/ry150-12.jpg", 
     cc: "150cc",
+    price: "GH₵ 10,800",
     specs: {
       engine: "150cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -114,6 +121,7 @@ const allMotorcycles = [
     name: "RY 150-36", 
     image: "/images/ry150-36.jpg", 
     cc: "150cc",
+    price: "GH₵ 13,500",
     specs: {
       engine: "150cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -129,6 +137,7 @@ const allMotorcycles = [
     name: "RYGY 150", 
     image: "/images/rygy150.jpg", 
     cc: "150cc",
+    price: "GH₵ 11,800",
     specs: {
       engine: "150cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -144,6 +153,7 @@ const allMotorcycles = [
     name: "RYGY 150 Plus", 
     image: "/images/rygy150plus.jpg", 
     cc: "150cc",
+    price: "GH₵ 12,500",
     specs: {
       engine: "150cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -159,6 +169,7 @@ const allMotorcycles = [
     name: "RY Sports 200", 
     image: "/images/rysports200.jpg", 
     cc: "200cc",
+    price: "GH₵ 20,000",
     specs: {
       engine: "200cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",
@@ -174,6 +185,7 @@ const allMotorcycles = [
     name: "RY Sports II", 
     image: "/images/rysportsII.jpg", 
     cc: "200cc",
+    price: "GH₵ 18,500",
     specs: {
       engine: "200cc, 4-Stroke, Single Cylinder, Air-Cooled",
       transmission: "5-Speed Manual",

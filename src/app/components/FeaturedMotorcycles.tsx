@@ -8,7 +8,7 @@ const motorcycles = [
   {
     id: 1,
     name: "RY Sports 200",
-    price: "$18,999",
+    price: "GH₵ 20,000",
     cc: "200cc",
     image: "/images/rysports200.jpg",
     specs: {
@@ -24,7 +24,7 @@ const motorcycles = [
   {
     id: 2,
     name: "RY 150-36",
-    price: "$16,499",
+    price: "GH₵ 13,500",
     cc: "150cc",
     image: "/images/ry150-36.jpg",
     specs: {
@@ -40,7 +40,7 @@ const motorcycles = [
   {
     id: 3,
     name: "RYGY 150 Plus",
-    price: "$21,299",
+    price: "GH₵ 12,500",
     cc: "150cc",
     image: "/images/rygy150plus.jpg",
     specs: {
