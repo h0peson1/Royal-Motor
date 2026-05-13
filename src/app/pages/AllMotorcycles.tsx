@@ -236,6 +236,9 @@ export function AllMotorcycles() {
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900 line-clamp-1">{bike.name}</h3>
                   <span className="text-xs font-medium text-red-600 bg-red-50 px-3 py-1 rounded-full flex-shrink-0">{bike.cc}</span>
                 </div>
+                <div className="mb-6">
+                  <span className="text-2xl font-bold text-red-600">{bike.price}</span>
+                </div>
                 <button 
                   onClick={() => setSelectedBike(bike)}
                   className="w-full py-3 bg-gray-900 text-white rounded-xl hover:bg-red-600 transition-colors font-semibold text-sm sm:text-base"
@@ -282,9 +285,12 @@ export function AllMotorcycles() {
                 <div className="w-full md:w-1/2 p-6 sm:p-8">
                   <div className="mb-6">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{selectedBike.name}</h2>
-                    <span className="inline-block bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                      Technical Specifications
-                    </span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-2xl font-bold text-red-600">{selectedBike.price}</span>
+                      <span className="inline-block bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Technical Specifications
+                      </span>
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">

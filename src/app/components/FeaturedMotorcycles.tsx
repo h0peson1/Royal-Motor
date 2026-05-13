@@ -137,9 +137,12 @@ export function FeaturedMotorcycles() {
                 <div className="w-full md:w-1/2 p-6 sm:p-8">
                   <div className="mb-6">
                     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">{selectedBike.name}</h2>
-                    <span className="inline-block bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                      Technical Specifications
-                    </span>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-2xl font-bold text-red-600">{selectedBike.price}</span>
+                      <span className="inline-block bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Technical Specifications
+                      </span>
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
