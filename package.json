@@ -80,5 +80,6 @@
     },
     "react-dom": {
       "optional": true
+    }
   }
 }
