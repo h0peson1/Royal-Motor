@@ -1,9 +1,11 @@
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router';
+import { motion, AnimatePresence } from 'motion/react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -15,7 +17,11 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Use the "scrolled" look (glass/solid) if we've scrolled OR if we are not on the home page
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
   const showScrolledLook = isScrolled || !isHomePage;
 
   return (
@@ -35,6 +41,7 @@ export function Navbar() {
             </span>
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link to="/" className={`transition-colors font-medium hover:text-red-500 ${showScrolledLook ? 'text-gray-900' : 'text-gray-200'}`}>Home</Link>
             <Link to="/motorcycles" className={`transition-colors font-medium hover:text-red-500 ${showScrolledLook ? 'text-gray-900' : 'text-gray-200'}`}>Shop</Link>
@@ -42,11 +49,43 @@ export function Navbar() {
             <a href="#contact" className={`transition-colors font-medium hover:text-red-500 ${showScrolledLook ? 'text-gray-900' : 'text-gray-200'}`}>Contact</a>
           </div>
 
-          <button className={`p-2 rounded-lg transition-colors ${showScrolledLook ? 'hover:bg-gray-100 text-gray-900' : 'hover:bg-white/10 text-white'}`}>
-            <ShoppingCart className="w-6 h-6" />
-          </button>
+          <div className="flex items-center gap-2">
+            <button className={`p-2 rounded-lg transition-colors ${showScrolledLook ? 'hover:bg-gray-100 text-gray-900' : 'hover:bg-white/10 text-white'}`}>
+              <ShoppingCart className="w-6 h-6" />
+            </button>
+            
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className={`p-2 md:hidden rounded-lg transition-colors ${showScrolledLook ? 'hover:bg-gray-100 text-gray-900' : 'hover:bg-white/10 text-white'}`}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white border-b border-gray-100 overflow-hidden shadow-xl"
+          >
+            <div className="px-6 py-8 flex flex-col gap-6">
+              <Link to="/" className="text-xl font-medium text-gray-900 hover:text-red-600 transition-colors">Home</Link>
+              <Link to="/motorcycles" className="text-xl font-medium text-gray-900 hover:text-red-600 transition-colors">Shop</Link>
+              <a href="#about" className="text-xl font-medium text-gray-900 hover:text-red-600 transition-colors">About Us</a>
+              <a href="#contact" className="text-xl font-medium text-gray-900 hover:text-red-600 transition-colors">Contact</a>
+              <button className="w-full py-4 bg-red-600 text-white rounded-xl font-bold shadow-lg shadow-red-200">
+                Book a Consultation
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

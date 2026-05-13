@@ -9,12 +9,12 @@ export function Hero() {
         <img
           src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=2000&auto=format&fit=crop"
           alt="Premium luxury motorcycle"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center md:object-right"
         />
       </div>
 
       {/* Dark Subtle Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
       <div className="absolute inset-0 bg-black/20"></div>
       
       {/* Subtle fade at bottom to blend with next section */}
@@ -22,21 +22,21 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto w-full">
-        <div className="max-w-2xl text-left">
+        <div className="max-w-2xl text-center md:text-left">
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
           >
-            Ride Beyond<br />Limits
+            Ride Beyond<br className="hidden sm:block" /> Limits
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-xl text-gray-200 leading-relaxed mb-10"
+            className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-10 px-4 md:px-0"
           >
             Experience the ultimate freedom with our premium collection of motorcycles.
             Engineering excellence meets timeless design.
@@ -46,12 +46,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="flex flex-wrap gap-4 mb-12"
+            className="flex flex-col sm:flex-row gap-4 mb-12 justify-center md:justify-start px-4 md:px-0"
           >
-            <button className="px-8 py-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transform hover:-translate-y-1 font-semibold">
+            <button className="w-full sm:w-auto px-8 py-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all duration-300 shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transform hover:-translate-y-1 font-semibold">
               Shop Motorcycles
             </button>
-            <button className="px-8 py-4 bg-transparent text-white rounded-lg border-2 border-white/30 hover:border-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm transform hover:-translate-y-1 font-semibold">
+            <button className="w-full sm:w-auto px-8 py-4 bg-transparent text-white rounded-lg border-2 border-white/30 hover:border-white hover:bg-white/10 transition-all duration-300 backdrop-blur-sm transform hover:-translate-y-1 font-semibold">
               Book Consultation
             </button>
           </motion.div>
@@ -61,11 +61,11 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-wrap items-center gap-6 text-sm text-gray-300 font-medium"
+            className="flex flex-wrap items-center justify-center md:justify-start gap-4 sm:gap-6 text-sm text-gray-300 font-medium px-4 md:px-0"
           >
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-red-500" />
-              <span>Financing Available</span>
+              <span>Financing</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-red-500" />
@@ -73,7 +73,7 @@ export function Hero() {
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-red-500" />
-              <span>Warranty Included</span>
+              <span>Warranty</span>
             </div>
           </motion.div>
         </div>
